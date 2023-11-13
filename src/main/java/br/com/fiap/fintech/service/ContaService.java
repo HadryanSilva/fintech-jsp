@@ -5,12 +5,13 @@ import br.com.fiap.fintech.model.Conta;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.Date;
+import java.util.List;
 
 public class ContaService {
 	
 	private final ContaDAOImpl contaDAO = new ContaDAOImpl();
 	
-	public void salvarConta(HttpServletRequest request, HttpServletResponse response) {
+	public void salvar(HttpServletRequest request, HttpServletResponse response) {
 		String nome = request.getParameter("nome");
 		String descricao = request.getParameter("descricao");
 		String saldo = request.getParameter("saldo");
@@ -21,13 +22,11 @@ public class ContaService {
 		conta.setDataCriacao(new Date());
 		conta.setSaldo(Double.valueOf(saldo));
 		
-		Conta contaSalva = contaDAO.save(conta);
-		
-		if(contaSalva != null) {
-			response.setStatus(201);
-		} else {
-			response.setStatus(422);
-		}
+		contaDAO.save(conta);
+	}
+	
+	public List<Conta> listar() {
+		return contaDAO.findAll();
 	}
 	
 }

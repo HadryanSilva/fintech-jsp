@@ -10,6 +10,8 @@
 <br/>
 <a href="HelloServlet">Hello Servlet</a>
 <br/>
-<a href="formCadastroConta.html">Cadastrar Conta</a>
+<a href="form-cadastro-conta.html">Cadastrar Conta</a>
+<br/>
+<a href="ContaServlet">Listar Contas</a>
 </body>
 </html>
