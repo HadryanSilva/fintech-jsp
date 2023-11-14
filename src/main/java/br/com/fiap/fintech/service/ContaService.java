@@ -11,18 +11,17 @@ public class ContaService {
 	
 	private final ContaDAOImpl contaDAO = new ContaDAOImpl();
 	
-	public void salvar(HttpServletRequest request, HttpServletResponse response) {
+	public Conta salvar(HttpServletRequest request, HttpServletResponse response) {
 		String nome = request.getParameter("nome");
 		String descricao = request.getParameter("descricao");
-		String saldo = request.getParameter("saldo");
 		
 		Conta conta = new Conta();
 		conta.setNome(nome);
 		conta.setDescricao(descricao);
 		conta.setDataCriacao(new Date());
-		conta.setSaldo(Double.valueOf(saldo));
+		conta.setSaldo(0.00);
 		
-		contaDAO.save(conta);
+		return contaDAO.save(conta);
 	}
 	
 	public List<Conta> listar() {

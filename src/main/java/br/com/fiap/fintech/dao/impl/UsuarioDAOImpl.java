@@ -15,6 +15,8 @@ import java.util.List;
 public class UsuarioDAOImpl implements UsuarioDAO {
 	
 	private static final String SELECT_BY_ID = "SELECT * FROM usuario WHERE id = ?";
+	private static final String SELECT_BY_LOGIN = "SELECT * FROM usuario WHERE email = ? AND password = ?";
+	private static final String SELECT_BY_EMAIL = "SELECT * FROM usuario WHERE email = ?";
 	private static final String SELECT_ALL = "SELECT * FROM usuario";
 	private static final String INSERT = "INSERT INTO usuario (id, name, email, password, role, data_criacao, conta_id) VALUES (usuario_seq.NEXTVAL, ?, ?, ?, ?, ?, ?)";
 	private static final String UPDATE = "UPDATE usuario SET name = ?, email = ?, password = ?, role = ?, data_criacao = ?, conta_id = ? WHERE id = ?";
@@ -38,6 +40,56 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 				usuario = new Usuario();
 				usuario.setId(result.getInt("id"));
 				usuario.setName(result.getString("nome"));
+				usuario.setEmail(result.getString("email"));
+				usuario.setPassword(result.getString("password"));
+				usuario.setRole(RoleUsuario.valueOf(result.getString("role")));
+				usuario.setDataCriacao(result.getDate("data_criacao"));
+				usuario.setContaId(result.getInt("conta_id"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (result != null) {
+					result.close();
+				}
+				if (statement != null) {
+					statement.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return usuario;
+	}
+	
+	public Usuario findByLogin(String email, String senha) {
+		Connection connection = null;
+		PreparedStatement statement = null;
+		ResultSet result = null;
+		Usuario usuario = null;
+		
+		try {
+			connection = JDBCOracleUtil.getConnection();
+			assert connection != null;
+			if (senha != null) {
+				statement = connection.prepareStatement(SELECT_BY_LOGIN);
+				statement.setString(1, email);
+				statement.setString(2, senha);
+			} else {
+				statement = connection.prepareStatement(SELECT_BY_EMAIL);
+				statement.setString(1, email);
+			}
+			result = statement.executeQuery();
+			
+			if (result.next()) {
+				usuario = new Usuario();
+				usuario.setId(result.getInt("id"));
+				usuario.setName(result.getString("name"));
 				usuario.setEmail(result.getString("email"));
 				usuario.setPassword(result.getString("password"));
 				usuario.setRole(RoleUsuario.valueOf(result.getString("role")));
