@@ -27,8 +27,8 @@
 										type="email" name="email" id="email" placeholder="E-mail" />
 								</div>
 								<div class="form-group">
-									<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
-										type="password" name="pass" id="pass" placeholder="Senha" />
+									<label for="password"><i class="zmdi zmdi-lock"></i></label> <input
+										type="password" name="password" id="password" placeholder="Senha" />
 								</div>
 								<div class="form-group">
 									<label for="nome"><i class="zmdi zmdi-lock-outline"></i></label>
