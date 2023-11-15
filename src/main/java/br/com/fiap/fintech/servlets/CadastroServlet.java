@@ -21,7 +21,7 @@ public class CadastroServlet extends HttpServlet {
 		if (usuarioService.findByEmail(email) == null) {
 			Conta contaSalva = contaService.salvar(request, response);
 			Usuario usuarioSalvo = usuarioService.salvar(request, response, contaSalva);
-			response.sendRedirect("index.html");
+			response.sendRedirect("index.jsp");
 		} else {
 			PrintWriter writer = response.getWriter();
 			writer.println("<html><body>");
