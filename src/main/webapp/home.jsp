@@ -163,8 +163,8 @@
 						<input class="form-control" id="email" type="email"
 							   placeholder="name@example.com"
 							   data-sb-validations="required,email" /> <label for="email">E-mail</label>
-						<div class="invalid-feedback" data-sb-feedback="email:required">Digite um e-mail v&aacute;lido</div>
-						<div class="invalid-feedback" data-sb-feedback="email:email">Formato de email inv&aacute;lido.</div>
+						<div class="invalid-feedback" data-sb-feedback="email:required">Digite um e-mail válido</div>
+						<div class="invalid-feedback" data-sb-feedback="email:email">Formato de email inválido.</div>
 					</div>
 					<div class="form-floating mb-3">
 						<input class="form-control" id="phone" type="tel"
