@@ -287,7 +287,7 @@
 																<div class="col-md-12">
 																	<div class="form-group">
 																		<label for="date">Data *</label>
-																		<input id="date" type="date"  name="date" placeholder="MM/DD/YYY"  class="form-control"
+																		<input id="date" type="datetime-local"  name="data" placeholder="MM/DD/YYY"  class="form-control"
 																			   required="required"
 																			   data-error="Informe a data.">
 																	</div>
@@ -299,8 +299,8 @@
 																	<div class="form-group">
 																		<label for="form_message">Descri&ccedil;&atilde;o *</label>
 																		<textarea id="form_message" name="message" class="form-control"
-																				  placeholder="Informe a descrição." rows="4" required="required"
-																				  data-error="Informe a descrição."></textarea>
+																				  placeholder="Informe a descri&ccedil;&atilde;o." rows="4" required="required"
+																				  data-error="Informe a descri&ccedil;&atilde;o."></textarea>
 																	</div>
 																</div>
 
@@ -379,7 +379,7 @@
 																<div class="col-md-12">
 																	<div class="form-group">
 																		<label for="date_despesa">Data *</label>
-																		<input id="date_despesa" type="date"  name="date" placeholder="MM/DD/YYY"  class="form-control"
+																		<input id="date_despesa" type="datetime-local"  name="data" placeholder="MM/DD/YYY"  class="form-control"
 																			   required="required"
 																			   data-error="Informe a data.">
 																	</div>
@@ -390,8 +390,8 @@
 																	<div class="form-group">
 																		<label for="form_message_despeza">Descri&ccedil;&atilde;o *</label>
 																		<textarea id="form_message_despeza" name="message" class="form-control"
-																				  placeholder="Informe a descrição." rows="4" required="required"
-																				  data-error="Informe a descrição."></textarea>
+																				  placeholder="Informe a descri&ccedil;&atilde;o." rows="4" required="required"
+																				  data-error="Informe a descri&ccedil;&atilde;o."></textarea>
 																	</div>
 																</div>
 															</div>
@@ -460,7 +460,7 @@
 											<div class="col-md-12">
 												<div class="form-group">
 													<label for="date_investimento">Data *</label>
-													<input id="date_investimento" type="date"  name="date" placeholder="MM/DD/YYY"  class="form-control"
+													<input id="date_investimento" type="datetime-local"  name="data" placeholder="MM/DD/YYY"  class="form-control"
 														   required="required"
 														   data-error="Informe a data.">
 												</div>
@@ -471,8 +471,8 @@
 												<div class="form-group">
 													<label for="form_message_investimento">Descri&ccedil;&atilde;o *</label>
 													<textarea id="form_message_investimento" name="message" class="form-control"
-															  placeholder="Informe a descrição." rows="4" required="required"
-															  data-error="Informe a descrição."></textarea>
+															  placeholder="Informe a descri&ccedil;&atilde;o." rows="4" required="required"
+															  data-error="Informe a descri&ccedil;&atilde;o."></textarea>
 												</div>
 											</div>
 										</div>
