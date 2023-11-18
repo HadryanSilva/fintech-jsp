@@ -34,9 +34,9 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portf&oacute;lio</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre Nós</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre N&oacute;s</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contato</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
@@ -121,7 +121,7 @@
 <section class="page-section bg-primary text-white mb-0" id="about">
 	<div class="container">
 		<h2
-				class="page-section-heading text-center text-uppercase text-white">Sobre Nós</h2>
+				class="page-section-heading text-center text-uppercase text-white">Sobre N&oacute;s</h2>
 		<div class="divider-custom divider-light">
 			<div class="divider-custom-line"></div>
 			<div class="divider-custom-icon">
@@ -131,10 +131,10 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-4 ms-auto">
-				<p class="lead">Nossa missão é facilitar o seu controle financeiro e tornar a sua vida mais fácil</p>
+				<p class="lead">Nossa miss&atilde;o &eacute; facilitar o seu controle financeiro e tornar a sua vida mais f&aacute;cil</p>
 			</div>
 			<div class="col-lg-4 me-auto">
-				<p class="lead">Tenha o domínio da sua vida financeira.</p>
+				<p class="lead">Tenha o dom&iacute;nio da sua vida financeira.</p>
 			</div>
 		</div>
 	</div>
@@ -163,8 +163,8 @@
 						<input class="form-control" id="email" type="email"
 							   placeholder="name@example.com"
 							   data-sb-validations="required,email" /> <label for="email">E-mail</label>
-						<div class="invalid-feedback" data-sb-feedback="email:required">Digite um e-mail válido</div>
-						<div class="invalid-feedback" data-sb-feedback="email:email">Formato de email invalido.</div>
+						<div class="invalid-feedback" data-sb-feedback="email:required">Digite um e-mail v&aacute;lido</div>
+						<div class="invalid-feedback" data-sb-feedback="email:email">Formato de email inv&aacute;lido.</div>
 					</div>
 					<div class="form-floating mb-3">
 						<input class="form-control" id="phone" type="tel"
