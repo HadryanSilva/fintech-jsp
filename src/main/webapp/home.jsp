@@ -134,7 +134,7 @@
 				<p class="lead">Nossa miss&atilde;o &eacute; facilitar o seu controle financeiro e tornar a sua vida mais f&aacute;cil</p>
 			</div>
 			<div class="col-lg-4 me-auto">
-				<p class="lead">Tenha o domínio da sua vida financeira.</p>
+				<p class="lead">Tenha o dom&iacute;nio da sua vida financeira.</p>
 			</div>
 		</div>
 	</div>
