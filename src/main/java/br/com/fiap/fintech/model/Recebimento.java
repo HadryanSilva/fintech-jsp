@@ -6,15 +6,17 @@ public class Recebimento extends Operacao {
 	
 	private Integer id;
 	private Categoria categoria;
-	
+
+	@Override
 	public Integer getId() {
 		return id;
 	}
-	
+
+	@Override
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
+
 	public Categoria getCategoria() {
 		return categoria;
 	}
