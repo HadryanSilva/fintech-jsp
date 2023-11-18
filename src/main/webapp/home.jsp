@@ -261,7 +261,7 @@
 										<div class="card mt-2 mx-auto p-4 bg-light">
 											<div class="card-body bg-light">
 												<div class="container">
-													<form id="contact-form" role="form">
+													<form method="post" action="${pageContext.request.contextPath}/OperacaoServlet/recebimento" id="contact-form" role="form">
 														<div class="controls">
 															<div class="row">
 																<div class="col-md-12">
@@ -352,7 +352,7 @@
 										<div class="card mt-2 mx-auto p-4 bg-light">
 											<div class="card-body bg-light">
 												<div class="container">
-													<form id="contact-form" role="form">
+													<form method="post" action="${pageContext.request.contextPath}/OperacaoServlet/despesa" id="contact-form" role="form">
 														<div class="controls">
 															<div class="row">
 																<div class="col-md-12">
@@ -436,7 +436,7 @@
 								<div class="divider-custom-line"></div>
 							</div>
 							<div class="container">
-								<form id="contact-form" role="form">
+								<form method="post" action="${pageContext.request.contextPath}/OperacaoServlet/investimento" id="contact-form" role="form">
 									<div class="controls">
 										<div class="row">
 											<div class="col-md-12">
