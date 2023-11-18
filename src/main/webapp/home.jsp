@@ -266,11 +266,17 @@
 															<div class="row">
 																<div class="col-md-12">
 																	<div class="form-group">
+																		<label for="form_nome_recebimento">Nome *</label>
+																		<input type="text" name="nome" id="form_nome_recebimento" class="form-control">
+																	</div>
+																</div>
+																<div class="col-md-12">
+																	<div class="form-group">
 																		<label for="form_need">Informe a categoria *</label>
-																		<select id="form_need" name="need" class="form-control"
+																		<select id="form_need" name="categoria" class="form-control"
 																				required="required" data-error="Informe a categoria.">
 																			<option value="" selected disabled>--Selecione a categoria--</option>
-																			<option>Salário</option>
+																			<option>Salario</option>
 																			<option>Bonus</option>
 																			<option>Presente</option>
 																		</select>
@@ -279,7 +285,7 @@
 																<div class="col-md-12">
 																	<div class="form-group">
 																		<label for="id_price">Valor *</label>
-																		<input id="id_price" type="number"  step="0.01" name="quantity" min="0.01" class="form-control"
+																		<input id="id_price" type="number"  step="0.01" name="montante" min="0.01" class="form-control"
 																			   placeholder="Informe o valor *" required="required"
 																			   data-error="Informe o valor.">
 																	</div>
@@ -298,7 +304,7 @@
 																<div class="col-md-12">
 																	<div class="form-group">
 																		<label for="form_message">Descri&ccedil;&atilde;o *</label>
-																		<textarea id="form_message" name="message" class="form-control"
+																		<textarea id="form_message" name="descricao" class="form-control"
 																				  placeholder="Informe a descri&ccedil;&atilde;o." rows="4" required="required"
 																				  data-error="Informe a descri&ccedil;&atilde;o."></textarea>
 																	</div>
@@ -357,8 +363,14 @@
 															<div class="row">
 																<div class="col-md-12">
 																	<div class="form-group">
+																		<label for="form_nome_despesa">Nome *</label>
+																		<input type="text" name="nome" id="form_nome_despesa" class="form-control">
+																	</div>
+																</div>
+																<div class="col-md-12">
+																	<div class="form-group">
 																		<label for="form_need_despesa">Informe a categoria *</label>
-																		<select id="form_need_despesa" name="need" class="form-control"
+																		<select id="form_need_despesa" name="categoria" class="form-control"
 																				required="required" data-error="Informe a categoria.">
 																			<option value="" selected disabled>--Selecione a categoria--</option>
 																			<option>Aluguel</option>
@@ -371,7 +383,7 @@
 																<div class="col-md-12">
 																	<div class="form-group">
 																		<label for="id_price_despesa">Valor *</label>
-																		<input id="id_price_despesa" type="number"  step="0.01" name="quantity" min="0.01" class="form-control"
+																		<input id="id_price_despesa" type="number"  step="0.01" name="montante" min="0.01" class="form-control"
 																			   placeholder="Informe o valor *" required="required"
 																			   data-error="Informe o valor.">
 																	</div>
@@ -389,7 +401,7 @@
 																<div class="col-md-12">
 																	<div class="form-group">
 																		<label for="form_message_despeza">Descri&ccedil;&atilde;o *</label>
-																		<textarea id="form_message_despeza" name="message" class="form-control"
+																		<textarea id="form_message_despeza" name="descricao" class="form-control"
 																				  placeholder="Informe a descri&ccedil;&atilde;o." rows="4" required="required"
 																				  data-error="Informe a descri&ccedil;&atilde;o."></textarea>
 																	</div>
@@ -426,8 +438,7 @@
 					<div class="row justify-content-center">
 						<div class="col-lg-8">
 							<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">
-								Salvar Investimento</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Salvar Investimento</h2>
 							<div class="divider-custom">
 								<div class="divider-custom-line"></div>
 								<div class="divider-custom-icon">
@@ -436,51 +447,67 @@
 								<div class="divider-custom-line"></div>
 							</div>
 							<div class="container">
-								<form method="post" action="${pageContext.request.contextPath}/OperacaoServlet/investimento" id="contact-form" role="form">
-									<div class="controls">
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<label for="form_need_investimento">Informe a categoria *</label>
-													<select id="form_need_investimento" name="need" class="form-control"
-															required="required" data-error="Informe a categoria.">
-														<option value="" selected disabled>--Selecione a categoria--</option>
-														<option>Aporte</option>
-													</select>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<label for="id_price_investimento">Valor *</label>
-													<input id="id_price_investimento" type="number"  step="0.01" name="quantity" min="0.01" class="form-control"
-														   placeholder="Informe o valor *" required="required"
-														   data-error="Informe o valor.">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<label for="date_investimento">Data *</label>
-													<input id="date_investimento" type="datetime-local"  name="data" placeholder="MM/DD/YYY"  class="form-control"
-														   required="required"
-														   data-error="Informe a data.">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<label for="form_message_investimento">Descri&ccedil;&atilde;o *</label>
-													<textarea id="form_message_investimento" name="message" class="form-control"
-															  placeholder="Informe a descri&ccedil;&atilde;o." rows="4" required="required"
-															  data-error="Informe a descri&ccedil;&atilde;o."></textarea>
+								<div class="row ">
+									<div class="col-lg-7 mx-auto">
+										<div class="card mt-2 mx-auto p-4 bg-light">
+											<div class="card-body bg-light">
+												<div class="container">
+													<form method="post" action="${pageContext.request.contextPath}/OperacaoServlet/investimento" id="contact-form" role="form">
+														<div class="controls">
+															<div class="row">
+																<div class="col-md-12">
+																	<div class="form-group">
+																		<label for="form_nome_investimento">Nome *</label>
+																		<input type="text" name="nome" id="form_nome_investimento" class="form-control">
+																	</div>
+																</div>
+																<div class="col-md-12">
+																	<div class="form-group">
+																		<label for="form_need_investimento">Informe a categoria *</label>
+																		<select id="form_need_investimento" name="categoria" class="form-control"
+																				required="required" data-error="Informe a categoria.">
+																			<option value="" selected disabled>--Selecione a categoria--</option>
+																			<option>Aporte</option>
+																		</select>
+																	</div>
+																</div>
+																<div class="col-md-12">
+																	<div class="form-group">
+																		<label for="id_price_investimento">Valor *</label>
+																		<input id="id_price_investimento" type="number"  step="0.01" name="montante" min="0.01" class="form-control"
+																			   placeholder="Informe o valor *" required="required"
+																			   data-error="Informe o valor.">
+																	</div>
+																</div>
+																<div class="col-md-12">
+																	<div class="form-group">
+																		<label for="date_investimento">Data *</label>
+																		<input id="date_investimento" type="datetime-local"  name="data" placeholder="MM/DD/YYY"  class="form-control"
+																			   required="required"
+																			   data-error="Informe a data.">
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-md-12">
+																	<div class="form-group">
+																		<label for="form_message_investimento">Descri&ccedil;&atilde;o *</label>
+																		<textarea id="form_message_investimento" name="descricao" class="form-control"
+																				  placeholder="Informe a descri&ccedil;&atilde;o." rows="4" required="required"
+																				  data-error="Informe a descri&ccedil;&atilde;o."></textarea>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-12">
+															<button type="submit" class="btn btn-primary">Salvar</button>
+														</div>
+													</form>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary">Salvar</button>
-									</div>
-								</form>
+								</div>
 							</div>
 						</div>
 					</div>
