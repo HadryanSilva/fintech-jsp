@@ -34,9 +34,9 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portf&oacute;lio</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre Nós</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre N&oacute;s</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contato</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
@@ -121,7 +121,7 @@
 <section class="page-section bg-primary text-white mb-0" id="about">
 	<div class="container">
 		<h2
-				class="page-section-heading text-center text-uppercase text-white">Sobre Nós</h2>
+				class="page-section-heading text-center text-uppercase text-white">Sobre N&oacute;s</h2>
 		<div class="divider-custom divider-light">
 			<div class="divider-custom-line"></div>
 			<div class="divider-custom-icon">
@@ -131,7 +131,7 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-4 ms-auto">
-				<p class="lead">Nossa missão é facilitar o seu controle financeiro e tornar a sua vida mais fácil</p>
+				<p class="lead">Nossa miss&atilde;o &eacute; facilitar o seu controle financeiro e tornar a sua vida mais f&aacute;cil</p>
 			</div>
 			<div class="col-lg-4 me-auto">
 				<p class="lead">Tenha o domínio da sua vida financeira.</p>
@@ -163,8 +163,8 @@
 						<input class="form-control" id="email" type="email"
 							   placeholder="name@example.com"
 							   data-sb-validations="required,email" /> <label for="email">E-mail</label>
-						<div class="invalid-feedback" data-sb-feedback="email:required">Digite um e-mail válido</div>
-						<div class="invalid-feedback" data-sb-feedback="email:email">Formato de email invalido.</div>
+						<div class="invalid-feedback" data-sb-feedback="email:required">Digite um e-mail v&aacute;lido</div>
+						<div class="invalid-feedback" data-sb-feedback="email:email">Formato de email inv&aacute;lido.</div>
 					</div>
 					<div class="form-floating mb-3">
 						<input class="form-control" id="phone" type="tel"
@@ -273,11 +273,6 @@
 																			<option>Salário</option>
 																			<option>Bonus</option>
 																			<option>Presente</option>
-																			<option>Aluguel</option>
-																			<option>Luz</option>
-																			<option>Agua</option>
-																			<option>Fatura_Cartão</option>
-																			<option>Aporte</option>
 																		</select>
 																	</div>
 																</div>
@@ -302,7 +297,7 @@
 															<div class="row">
 																<div class="col-md-12">
 																	<div class="form-group">
-																		<label for="form_message">Descrição *</label>
+																		<label for="form_message">Descri&ccedil;&atilde;o *</label>
 																		<textarea id="form_message" name="message" class="form-control"
 																				  placeholder="Informe a descrição." rows="4" required="required"
 																				  data-error="Informe a descrição."></textarea>
@@ -366,14 +361,10 @@
 																		<select id="form_need_despesa" name="need" class="form-control"
 																				required="required" data-error="Informe a categoria.">
 																			<option value="" selected disabled>--Selecione a categoria--</option>
-																			<option>Salário</option>
-																			<option>Bonus</option>
-																			<option>Presente</option>
 																			<option>Aluguel</option>
 																			<option>Luz</option>
 																			<option>Agua</option>
-																			<option>Fatura_Cartão</option>
-																			<option>Aporte</option>
+																			<option>Fatura_Cartao</option>
 																		</select>
 																	</div>
 																</div>
@@ -397,7 +388,7 @@
 															<div class="row">
 																<div class="col-md-12">
 																	<div class="form-group">
-																		<label for="form_message_despeza">Descrição *</label>
+																		<label for="form_message_despeza">Descri&ccedil;&atilde;o *</label>
 																		<textarea id="form_message_despeza" name="message" class="form-control"
 																				  placeholder="Informe a descrição." rows="4" required="required"
 																				  data-error="Informe a descrição."></textarea>
@@ -454,13 +445,6 @@
 													<select id="form_need_investimento" name="need" class="form-control"
 															required="required" data-error="Informe a categoria.">
 														<option value="" selected disabled>--Selecione a categoria--</option>
-														<option>Salário</option>
-														<option>Bonus</option>
-														<option>Presente</option>
-														<option>Aluguel</option>
-														<option>Luz</option>
-														<option>Agua</option>
-														<option>Fatura_Cartão</option>
 														<option>Aporte</option>
 													</select>
 												</div>
@@ -485,7 +469,7 @@
 										<div class="row">
 											<div class="col-md-12">
 												<div class="form-group">
-													<label for="form_message_investimento">Descrição *</label>
+													<label for="form_message_investimento">Descri&ccedil;&atilde;o *</label>
 													<textarea id="form_message_investimento" name="message" class="form-control"
 															  placeholder="Informe a descrição." rows="4" required="required"
 															  data-error="Informe a descrição."></textarea>
