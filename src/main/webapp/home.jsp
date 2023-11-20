@@ -41,15 +41,16 @@
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contato</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="index.jsp">Logout</a></li>
-
+				<a class="navbar-brand" href="#">
+					<img width="40" height="40" src="assets/img/avataaars.svg"
+						 alt="...">
+				</a>
 			</ul>
 		</div>
 	</div>
 </nav>
 <header class="masthead bg-primary text-white text-center">
 	<div class="container d-flex align-items-center flex-column">
-		<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg"
-			 alt="..." />
 		<h1 class="masthead-heading text-uppercase mb-0">Bem Vindo a Fintech</h1>
 		<div class="divider-custom divider-light">
 			<div class="divider-custom-line"></div>
@@ -62,6 +63,46 @@
 	</div>
 </header>
 <section class="page-section portfolio" id="portfolio">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-2 col-sm-6">
+				<div class="card-box border border-dark">
+					<div class="inner">
+						<h3> R$19000 </h3>
+						<h5> Saldo atual </h5>
+					</div>
+				</div>
+			</div>
+
+				<div class="col-lg-2 col-sm-6">
+					<div class="card-box border border-dark">
+						<div class="inner">
+							<h3> R$185358 </h3>
+							<h5> Recebimento </h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-sm-6">
+					<div class="card-box border border-dark">
+						<div class="inner">
+							<h3> R$500 </h3>
+							<h5> Despesa </h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-sm-6">
+					<div class="card-box border border-dark">
+						<div class="inner">
+							<h3> R$723 </h3>
+							<h5> Investimento </h5>
+						</div>
+					</div>
+				</div>
+		</div>
+
+
+	</div>
+
 	<div class="container">
 		<h2
 				class="page-section-heading text-center text-uppercase text-secondary mb-0">Menu</h2>
