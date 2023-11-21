@@ -63,45 +63,6 @@
 	</div>
 </header>
 <section class="page-section portfolio" id="portfolio">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-2 col-sm-6">
-				<div class="card-box border border-dark">
-					<div class="inner">
-						<h3> R$19000 </h3>
-						<h5> Saldo atual </h5>
-					</div>
-				</div>
-			</div>
-
-				<div class="col-lg-2 col-sm-6">
-					<div class="card-box border border-dark">
-						<div class="inner">
-							<h3> R$185358 </h3>
-							<h5> Recebimento </h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-2 col-sm-6">
-					<div class="card-box border border-dark">
-						<div class="inner">
-							<h3> R$500 </h3>
-							<h5> Despesa </h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-2 col-sm-6">
-					<div class="card-box border border-dark">
-						<div class="inner">
-							<h3> R$723 </h3>
-							<h5> Investimento </h5>
-						</div>
-					</div>
-				</div>
-		</div>
-
-
-	</div>
 
 	<div class="container">
 		<h2
@@ -124,8 +85,19 @@
 							<i class="fas fa-plus fa-3x"></i>
 						</div>
 					</div>
-					<img class="img-fluid" src="assets/img/portfolio/safe.png"
-						 alt="..." />
+					<div class="container mt-3 pt-3">
+						<div class="row g-3">
+							<div class="col-12 col-sm-6 col-lg-8">
+								<div class="rounded-3 border-start border-4 border-primary alert-primary shadow h-100">
+									<span class="bi bi-cart4 fs-1 m-4 float-start"></span>
+									<div class="text-end p-4">
+										<span class="d-block text-dark"> Recebimento</span>
+										<span class="text-dark fs-3">Total R$ 18.85</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 mb-5">
@@ -138,8 +110,19 @@
 							<i class="fas fa-plus fa-3x"></i>
 						</div>
 					</div>
-					<img class="img-fluid" src="assets/img/portfolio/safe.png"
-						 alt="..." />
+					<div class="container mt-3 pt-3">
+						<div class="row g-3">
+							<div class="col-12 col-sm-6 col-lg-8">
+								<div class="rounded-3 border-start border-4 border-primary alert-primary shadow h-100">
+									<span class="bi bi-cart4 fs-1 m-4 float-start"></span>
+									<div class="text-end p-4">
+										<span class="d-block text-dark"> Despesa </span>
+										<span class="text-dark fs-3">Total R$ 18.85</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
@@ -152,8 +135,19 @@
 							<i class="fas fa-plus fa-3x"></i>
 						</div>
 					</div>
-					<img class="img-fluid" src="assets/img/portfolio/safe.png"
-						 alt="..." />
+					<div class="container mt-3 pt-3">
+						<div class="row g-3">
+							<div class="col-12 col-sm-6 col-lg-8">
+								<div class="rounded-3 border-start border-4 border-primary alert-primary shadow h-100">
+									<span class="bi bi-cart4 fs-1 m-4 float-start"></span>
+									<div class="text-end p-4">
+										<span class="d-block text-dark"> Investimento </span>
+										<span class="text-dark fs-3">Total R$ 18.85</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
