@@ -17,8 +17,7 @@ public class OperacaoDAOImpl implements OperacaoDAO {
 	private static final String SELECT_BY_ID = "SELECT * FROM operacao WHERE id = ?";
 	private static final String SELECT_ALL = "SELECT * FROM operacao";
 	private static final String INSERT = "INSERT INTO operacao (id, nome, descricao, tipo_operacao, montante, data_hora, conta_id) VALUES (operacao_seq.NEXTVAL, ?, ?, ?, ?, ?, ?)";
-	private static final String UPDATE = "UPDATE operacao SET nome = ?, descricao = ?, tipo_operacao = ?, montante = ?, data_hora = ? WHERE id = ?";
-	private static final String DELETE = "DELETE FROM operacao WHERE id = ?";
+	private static final String SELECT_BY_CONTA = "SELECT * FROM operacao WHERE conta_id = ? AND tipo_operacao = ?";
 	
 	@Override
 	public Operacao findById(Integer id) {
@@ -164,6 +163,51 @@ public class OperacaoDAOImpl implements OperacaoDAO {
 			}
 		}
 		return null;
+	}
+
+	public List<Operacao> findByConta(Integer id, TipoOperacao tipoOperacao) {
+		Connection connection = null;
+		PreparedStatement statement = null;
+		ResultSet result = null;
+		List<Operacao> operacoes = new ArrayList<>();
+
+		try {
+			connection = JDBCOracleUtil.getConnection();
+			assert connection != null;
+			statement = connection.prepareStatement(SELECT_BY_CONTA);
+			statement.setInt(1, id);
+			statement.setString(2, tipoOperacao.toString());
+			result = statement.executeQuery();
+
+			while (result.next()) {
+				Operacao operacao = new Operacao();
+				operacao.setId(result.getInt("id"));
+				operacao.setNome(result.getString("nome"));
+				operacao.setDescricao(result.getString("descricao"));
+				operacao.setMontante(result.getDouble("montante"));
+				operacao.setDataHora(result.getDate("data_hora"));
+				operacao.setTipoOperacao(TipoOperacao.valueOf(result.getString("tipo_operacao")));
+				operacao.setContaId(result.getInt("conta_id"));
+				operacoes.add(operacao);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (result != null) {
+					result.close();
+				}
+				if (statement != null) {
+					statement.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return operacoes;
 	}
 	
 }
