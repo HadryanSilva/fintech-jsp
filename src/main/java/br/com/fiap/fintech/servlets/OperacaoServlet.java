@@ -41,7 +41,7 @@ public class OperacaoServlet extends HttpServlet {
         } else if (path.equals("/OperacaoServlet/investimento")) {
             Conta conta = operacaoService.salvarInvestimento(request);
             request.setAttribute("saldo", conta.getSaldo());
-            request.setAttribute("totalInvestimentos", operacaoService.getTotalPorTipoOperacao(conta.getId(), TipoOperacao.INVESTIMENTO));
+            request.setAttribute("totalInvestimento", operacaoService.getTotalPorTipoOperacao(conta.getId(), TipoOperacao.INVESTIMENTO));
             RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
             dispatcher.forward(request, response);
         } else {

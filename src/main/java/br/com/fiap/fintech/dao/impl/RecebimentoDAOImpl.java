@@ -17,8 +17,6 @@ public class RecebimentoDAOImpl implements RecebimentoDAO {
 	private static final String SELECT_ALL = "SELECT op.nome, op.descricao, op.montante, recebimento.id, recebimento" +
 			".categoria FROM recebimento INNER JOIN operacao op ON recebimento.id = op.id";
 	private static final String INSERT = "INSERT INTO recebimento (id, categoria) VALUES (?, ?)";
-	private static final String UPDATE = "UPDATE recebimento SET categoria = ? WHERE id = ?";
-	private static final String DELETE = "DELETE FROM recebimento WHERE id = ?";
 	
 	@Override
 	public Recebimento findById(Integer id) {

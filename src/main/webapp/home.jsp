@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+	<base href="<%= request.getContextPath() %>/">
 	<meta charset="UTF-8">
 	<meta name="viewport"
 		  content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -34,14 +35,14 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portf&oacute;lio</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="/home.jsp">Portf&oacute;lio</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre N&oacute;s</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="/home.jsp">Sobre N&oacute;s</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contato</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="/home.jsp">Contato</a></li>
 				<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="index.jsp">Logout</a></li>
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="home.jsp">
 					<img width="40" height="40" src="assets/img/avataaars.svg"
 						 alt="...">
 				</a>
@@ -74,6 +75,15 @@
 			</div>
 			<div class="divider-custom-line"></div>
 		</div>
+		<div class="col-12" style="margin-bottom: 15px">
+			<div class="rounded-3 border-start border-4 border-dark bg-dark shadow h-100">
+				<span class="bi bi-heart fs-1 m-4 text-white float-start"></span>
+				<div class="text-end p-4 text-white" style="align-items: center">
+					<span class="d-block text-center">Saldo Atual</span>
+					<span class="d-block fs-3 text-center">R$<%= request.getAttribute("saldo") %></span>
+				</div>
+			</div>
+		</div>
 		<div class="row justify-content-center">
 			<div class="col-md-6 col-lg-4 mb-5">
 				<div class="portfolio-item mx-auto" data-bs-toggle="modal"
@@ -87,12 +97,12 @@
 					</div>
 					<div class="container mt-3 pt-3">
 						<div class="row g-3">
-							<div class="col-12 col-sm-6 col-lg-8">
+							<div class="col-12 col-sm-6 col-lg-12">
 								<div class="rounded-3 border-start border-4 border-primary alert-primary shadow h-100">
 									<span class="bi bi-cart4 fs-1 m-4 float-start"></span>
 									<div class="text-end p-4">
 										<span class="d-block text-dark"> Recebimento</span>
-										<span class="text-dark fs-3">Total R$ 18.85</span>
+										<span class="text-dark fs-3">Total: R$<%= request.getAttribute("totalRecebimentos") %></span>
 									</div>
 								</div>
 							</div>
@@ -112,12 +122,12 @@
 					</div>
 					<div class="container mt-3 pt-3">
 						<div class="row g-3">
-							<div class="col-12 col-sm-6 col-lg-8">
+							<div class="col-12 col-sm-6 col-lg-12">
 								<div class="rounded-3 border-start border-4 border-primary alert-primary shadow h-100">
 									<span class="bi bi-cart4 fs-1 m-4 float-start"></span>
 									<div class="text-end p-4">
 										<span class="d-block text-dark"> Despesa </span>
-										<span class="text-dark fs-3">Total R$ 18.85</span>
+										<span class="text-dark fs-3">Total: R$<%= request.getAttribute("totalDespesas") %></span>
 									</div>
 								</div>
 							</div>
@@ -137,12 +147,12 @@
 					</div>
 					<div class="container mt-3 pt-3">
 						<div class="row g-3">
-							<div class="col-12 col-sm-6 col-lg-8">
+							<div class="col-12 col-sm-6 col-lg-12">
 								<div class="rounded-3 border-start border-4 border-primary alert-primary shadow h-100">
 									<span class="bi bi-cart4 fs-1 m-4 float-start"></span>
 									<div class="text-end p-4">
 										<span class="d-block text-dark"> Investimento </span>
-										<span class="text-dark fs-3">Total R$ 18.85</span>
+										<span class="text-dark fs-3">Total: R$<%= request.getAttribute("totalInvestimentos") %></span>
 									</div>
 								</div>
 							</div>
@@ -190,7 +200,7 @@
 				<form id="contactForm" data-sb-form-api-token="API_TOKEN">
 					<div class="form-floating mb-3">
 						<input class="form-control" id="name" type="text"
-							   placeholder="Enter your name..." data-sb-validations="required" />
+							   placeholder="Seu nome" data-sb-validations="required" />
 						<label for="name">Nome Completo</label>
 						<div class="invalid-feedback" data-sb-feedback="name:required">Digite seu nome</div>
 					</div>
@@ -205,26 +215,22 @@
 						<input class="form-control" id="phone" type="tel"
 							   placeholder="(123) 456-7890" data-sb-validations="required" />
 						<label for="phone">Telefone</label>
-						<div class="invalid-feedback" data-sb-feedback="phone:required">A
-							phone number is required.</div>
+						<div class="invalid-feedback" data-sb-feedback="phone:required">Insira um telefone v&aacute;lido</div>
 					</div>
 					<div class="form-floating mb-3">
 							<textarea class="form-control" id="message" type="text"
-									  placeholder="Enter your message here..." style="height: 10rem"
+									  placeholder="Sua mensagem" style="height: 10rem"
 									  data-sb-validations="required"></textarea>
 						<label for="message">Mensagem</label>
 						<div class="invalid-feedback" data-sb-feedback="message:required">Insira uma mensagem</div>
 					</div>
 					<div class="d-none" id="submitSuccessMessage">
 						<div class="text-center mb-3">
-							<div class="fw-bolder">Form submission successful!</div>
-							To activate this form, sign up at <br /> <a
-								href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+							<div class="fw-bolder">Envio realizado com sucesso</div>
 						</div>
 					</div>
 					<div class="d-none" id="submitErrorMessage">
-						<div class="text-center text-danger mb-3">Error sending
-							message!</div>
+						<div class="text-center text-danger mb-3">Erro ao enviar a mensagem</div>
 					</div>
 					<button class="btn btn-primary btn-xl disabled" id="submitButton"
 							type="submit">Enviar</button>
@@ -237,13 +243,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 mb-5 mb-lg-0">
-				<h4 class="text-uppercase mb-4">Location</h4>
+				<h4 class="text-uppercase mb-4">Localiza&ccedil;&atilde;o</h4>
 				<p class="lead mb-0">
-					2215 John Daniel Drive <br /> Clark, MO 65243
+					R. 82, 400 - St. Central<br /> Goi&acirc;nia - GO, 74015-908
 				</p>
 			</div>
 			<div class="col-lg-4 mb-5 mb-lg-0">
-				<h4 class="text-uppercase mb-4">Around the Web</h4>
+				<h4 class="text-uppercase mb-4">Nossas redes</h4>
 				<a class="btn btn-outline-light btn-social mx-1" href="#!"><i
 						class="fab fa-fw fa-facebook-f"></i></a> <a
 					class="btn btn-outline-light btn-social mx-1" href="#!"><i
@@ -254,10 +260,10 @@
 					class="fab fa-fw fa-dribbble"></i></a>
 			</div>
 			<div class="col-lg-4">
-				<h4 class="text-uppercase mb-4">About Freelancer</h4>
+				<h4 class="text-uppercase mb-4">Sobre n&oacute;s</h4>
 				<p class="lead mb-0">
-					Freelance is a free to use, MIT licensed Bootstrap theme created
-					by <a href="http://startbootstrap.com">Start Bootstrap</a> .
+					Projeto da Fintech realizado no curso de An&aacute;lise e desenvolvimento de sistemas
+					da <a href="https://www.fiap.com.br/">FIAP</a>
 				</p>
 			</div>
 		</div>
@@ -265,7 +271,7 @@
 </footer>
 <div class="copyright py-4 text-center text-white">
 	<div class="container">
-		<small>Copyright &copy; Your Website 2021</small>
+		<small>Copyright &copy; Fintech</small>
 	</div>
 </div>
 <div class="portfolio-modal modal fade" id="portfolioModal1"
@@ -350,7 +356,7 @@
 
 														</div>
 														<div class="col-md-12">
-															<button type="submit" class="btn btn-primary">Salvar</button>
+															<button type="submit" class="btn btn-primary" style="margin-top: 10px">Salvar</button>
 														</div>
 													</form>
 												</div>
@@ -444,7 +450,7 @@
 															</div>
 														</div>
 														<div class="col-md-12">
-															<button type="submit" class="btn btn-primary">Salvar</button>
+															<button type="submit" class="btn btn-primary" style="margin-top: 10px">Salvar</button>
 														</div>
 													</form>
 												</div>
@@ -535,7 +541,7 @@
 															</div>
 														</div>
 														<div class="col-md-12">
-															<button type="submit" class="btn btn-primary">Salvar</button>
+															<button type="submit" class="btn btn-primary" style="margin-top: 10px">Salvar</button>
 														</div>
 													</form>
 												</div>

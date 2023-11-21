@@ -154,4 +154,48 @@ public class ContaDAOImpl implements ContaDAO {
 		}
 		return conta;
 	}
+	public Conta update(Conta conta) {
+		Connection connection = null;
+		PreparedStatement statement = null;
+
+		try {
+			connection = JDBCOracleUtil.getConnection();
+
+			if (conta.getId() == 0) {
+				throw new IllegalArgumentException("A conta deve ter um ID válido para realizar um UPDATE.");
+			}
+
+            assert connection != null;
+            statement = connection.prepareStatement(UPDATE);
+
+			statement.setString(1, conta.getNome());
+			statement.setString(2, conta.getDescricao());
+			statement.setDate(3, new Date(conta.getDataCriacao().getTime()));
+			statement.setDouble(4, conta.getSaldo());
+			statement.setInt(5, conta.getId());
+
+			int rowsAffected = statement.executeUpdate();
+
+			if (rowsAffected == 1) {
+				System.out.println("Conta atualizada com sucesso, ID: " + conta.getId());
+				return conta;
+			} else {
+				System.out.println("Nenhuma conta foi atualizada.");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (statement != null) {
+					statement.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
 }

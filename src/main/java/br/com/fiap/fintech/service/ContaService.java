@@ -2,6 +2,9 @@ package br.com.fiap.fintech.service;
 
 import br.com.fiap.fintech.dao.impl.ContaDAOImpl;
 import br.com.fiap.fintech.model.Conta;
+import br.com.fiap.fintech.model.Despesa;
+import br.com.fiap.fintech.model.Operacao;
+import br.com.fiap.fintech.model.Usuario;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.Date;
@@ -26,6 +29,26 @@ public class ContaService {
 	
 	public List<Conta> listar() {
 		return contaDAO.findAll();
+	}
+
+	public Conta atualizaSaldo(Usuario usuario, Operacao operacao) {
+		Conta conta = contaDAO.findById(usuario.getContaId());
+		if (conta != null && operacao instanceof Despesa) {
+			Double saldoAnterior = conta.getSaldo();
+			Double saldoAtualizado = saldoAnterior -= operacao.getMontante();
+			conta.setSaldo(saldoAtualizado);
+			return contaDAO.update(conta);
+		} else if (conta != null) {
+			Double saldoAnterior = conta.getSaldo();
+			Double saldoAtualizado = saldoAnterior += operacao.getMontante();
+			conta.setSaldo(saldoAtualizado);
+			return contaDAO.update(conta);
+		}
+		return null;
+	}
+
+	public Conta getContaByUser(Integer id) {
+		return contaDAO.findById(id);
 	}
 	
 }
